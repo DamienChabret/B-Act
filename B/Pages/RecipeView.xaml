@@ -2,11 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="B.Pages.RecipeView"
-             Title="RecipeView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="RecipeView"
+             xmlns:vm="clr-namespace:B.ViewModel" 
+             x:DataType="vm:RecipeViewModel">
+    
+<VerticalStackLayout>
+    <Label Text="{Binding recipeId}"></Label>
+    <Label Text="{Binding recipeName}"></Label>
+    <Label Text="{Binding recipeDescription}"></Label>
+    <Label Text="{Binding recipeRating}"></Label>
+</VerticalStackLayout>
+    
 </ContentPage>

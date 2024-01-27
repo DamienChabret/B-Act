@@ -1,4 +1,7 @@
-﻿namespace B
+﻿using B.Pages;
+using B.ViewModel;
+
+namespace B
 {
     public partial class App : Application
     {
@@ -6,7 +9,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new RecipeView();
         }
     }
 }
