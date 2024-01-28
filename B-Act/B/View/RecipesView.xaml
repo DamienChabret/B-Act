@@ -4,8 +4,9 @@
              x:Class="B.View.RecipesView"
              Title="RecipesView">
     <VerticalStackLayout>
-        <Grid x:Name="testGrid">
+        <StackLayout x:Name="testGrid">
             
-        </Grid>
+        </StackLayout>
+        
     </VerticalStackLayout>
 </ContentPage>

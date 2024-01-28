@@ -9,7 +9,7 @@ namespace B
         {
             InitializeComponent();
 
-            MainPage = new RecipesView();
+            MainPage = new NavigationPage(new RecipesView());
         }
     }
 }

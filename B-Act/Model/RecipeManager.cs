@@ -12,7 +12,7 @@ namespace Model
         /// </summary>
         public RecipeManager()
         {
-            recipes = new List<Recipe>();
+            recipes = recipeDAO.GetRAllRecipe();
         }
 
         /// <summary>
