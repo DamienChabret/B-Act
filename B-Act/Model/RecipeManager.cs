@@ -4,7 +4,7 @@ namespace Model
 {
     public class RecipeManager
     {
-        private IRecipeDAO recipeDAO = new RecipeDAO();
+        private IRecipeDAO recipeDAO = new RecipeFakeDAO();
         private List<Recipe> recipes;
 
         /// <summary>
@@ -39,10 +39,17 @@ namespace Model
         /// Update a recipe
         /// </summary>
         /// <param name="recipe"> recipe to update </param>
-        public void UpdateRecipe(Recipe recipe)
+        public Recipe UpdateRecipe(Recipe recipe)
         {
-            this.recipeDAO.UpdateRecipe(recipe);
-            throw new Exception();
+            Recipe updatedRecipe = this.recipeDAO.UpdateRecipe(recipe);
+            Recipe r = this.GetRecipe(recipe);
+            if (r != null)
+            {
+                r.Name = updatedRecipe.Name;
+                r.Description = updatedRecipe.Description;
+                r.Rating = updatedRecipe.Rating;
+            }
+            return r;
         }
 
         /// <summary>

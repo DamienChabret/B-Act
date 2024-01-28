@@ -3,6 +3,9 @@ using Model.Interface;
 
 namespace Data
 {
+    /// <summary>
+    /// Actual Recipe DAO to acess data from an API 
+    /// </summary>
     public class RecipeDAO : IRecipeDAO
     {
         public void AddRecipe(Recipe recipe)
@@ -25,7 +28,7 @@ namespace Data
             throw new NotImplementedException();
         }
 
-        public void UpdateRecipe(Recipe recipe)
+        public Recipe UpdateRecipe(Recipe recipe)
         {
             throw new NotImplementedException();
         }

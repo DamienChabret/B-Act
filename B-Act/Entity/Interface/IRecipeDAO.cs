@@ -28,7 +28,7 @@ namespace Model.Interface
         /// Update a recipe
         /// </summary>
         /// <param name="recipe"> recipe to update </param>
-        public void UpdateRecipe(Recipe recipe);
+        public Recipe UpdateRecipe(Recipe recipe);
 
         /// <summary>
         /// Get one recipe

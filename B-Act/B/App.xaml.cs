@@ -1,4 +1,4 @@
-﻿using B.Pages;
+﻿using B.View;
 using B.ViewModel;
 
 namespace B
@@ -9,7 +9,7 @@ namespace B
         {
             InitializeComponent();
 
-            MainPage = new RecipeView();
+            MainPage = new RecipesView();
         }
     }
 }
