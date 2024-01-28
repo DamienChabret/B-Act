@@ -8,7 +8,7 @@ public partial class RecipeView : ContentPage
 	{
         InitializeComponent();
 
-		var test = new RecipeViewModel()
+		var recipe = new RecipeViewModel()
 		{
 			Description = "etape 1 faire salut",
 			ID = 1,
@@ -16,6 +16,6 @@ public partial class RecipeView : ContentPage
 			Rating = 3
 		};
 
-		BindingContext = test;
+		BindingContext = recipe;
 	}
 }

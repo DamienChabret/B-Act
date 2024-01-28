@@ -5,7 +5,7 @@
     /// </summary>
     public class Recipe
     {
-        private int integer;
+        private int id;
         private string name;
         private string description;
         private int rating;
@@ -22,10 +22,10 @@
         /// <summary>
         /// ID of the recipe
         /// </summary>
-        public int Integer 
+        public int ID 
         { 
-            get => integer;
-            set => integer = value; 
+            get => id;
+            set => id = value; 
         }
 
         /// <summary>
