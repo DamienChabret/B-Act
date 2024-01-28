@@ -1,0 +1,3 @@
+User (Ingredient[], Recettes[], 
+Ingrédients (id, nom, quantité, datePeremption)
+Recettes (Ingrédients[], etapes, note)

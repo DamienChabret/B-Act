@@ -1,0 +1,26 @@
+B pou Boyzz act pour agir :
+
+Fonctionnalités principales :
+- Savoir ce que tu as dans ton frigo, aliments, date de péremption, quantité 
+avoir notif quand date de péremption approche (pouvoir choisir dans paramètre)
+permet de faire une liste de course en sachant ce qu'on a de ce qu'on a pas 
+
+- Avoir une liste de recette, connaitre les ingrédients, pouvoir filtrer par rapport aux ingrédients qu'on à pour savoir
+ce qu'il est possible de faire. Pouvoir noter les recettes. etc...
+
+
+Technologie : 
+Front : .NET MAUI
+Back : .NET API
+https://blog.cellenza.com/developpement-specifique/mobile/arbre-de-decision-mobile-quelle-technologie-pour-mon-projet-mobile/
+
+
+Architecture : MVVM (Model View View-Model)
+View : 
+- RecipeView
+
+View-Model :
+- RecipeViewModel 
+
+Model : 
+- Recipe 
