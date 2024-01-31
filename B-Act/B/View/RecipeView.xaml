@@ -6,16 +6,16 @@
              xmlns:vm="clr-namespace:B.ViewModel" 
              x:DataType="vm:RecipeViewModel">
     <StackLayout>
-        <Label Text="{Binding ID}" TextColor="Black"></Label>
-        <Entry Text=""></Entry>
+        <Label Text="{Binding RecipeId}" TextColor="Black"></Label>
+        <Entry Text="{Binding RecipeId}"></Entry>
 
         <Label Text="{Binding RecipeName}" TextColor="Black"></Label>
         <Entry Text="{Binding RecipeName}"></Entry>
 
-        <Label Text="{Binding Description}" TextColor="Black"></Label>
-        <Entry Text=""></Entry>
+        <Label Text="{Binding RecipeDescription}" TextColor="Black"></Label>
+        <Entry Text="{Binding RecipeDescription}"></Entry>
 
-        <Label Text="{Binding Rating}" TextColor="Black"></Label>
-        <Entry Text=""></Entry>
+        <Label Text="{Binding RecipeId}" TextColor="Black"></Label>
+        <Entry Text="{Binding RecipeId}"></Entry>
     </StackLayout>
 </ContentPage>

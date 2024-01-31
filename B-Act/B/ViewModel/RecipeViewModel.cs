@@ -14,8 +14,6 @@ namespace B.ViewModel
     /// </summary>
     public partial class RecipeViewModel : ObservableObject
     {
-        private Recipe recipe;
-
         [ObservableProperty]
         private int recipeId;
         [ObservableProperty]
@@ -27,10 +25,10 @@ namespace B.ViewModel
 
         public RecipeViewModel(Recipe recipe)
         {
-            this.recipe = recipe;
             recipeId = recipe.ID;
             recipeName = recipe.Name;
             recipeDescription = recipe.Description;
             recipeRating = recipe.Rating;
         }
+    }
 }
