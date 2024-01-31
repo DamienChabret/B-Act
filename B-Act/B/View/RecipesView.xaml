@@ -5,8 +5,7 @@
              Title="Accueil">
     <VerticalStackLayout>
         <StackLayout x:Name="testGrid">
-            
+
         </StackLayout>
-        
     </VerticalStackLayout>
 </ContentPage>

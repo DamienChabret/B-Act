@@ -6,9 +6,17 @@
              xmlns:vm="clr-namespace:B.ViewModel" 
              x:DataType="vm:RecipeViewModel">
     <VerticalStackLayout>
+
         <Label Text="{Binding ID}" TextColor="Black"></Label>
+        <Entry Text=""></Entry>
+
         <Label Text="{Binding Name}" TextColor="Black"></Label>
+        <Entry Text="{Binding Name}"></Entry>
+
         <Label Text="{Binding Description}" TextColor="Black"></Label>
+        <Entry Text=""></Entry>
+
         <Label Text="{Binding Rating}" TextColor="Black"></Label>
+        <Entry Text=""></Entry>
     </VerticalStackLayout>
 </ContentPage>

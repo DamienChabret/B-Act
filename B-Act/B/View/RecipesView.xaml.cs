@@ -2,6 +2,9 @@ using Model;
 
 namespace B.View;
 
+/// <summary>
+/// Display all the recipes
+/// </summary>
 public partial class RecipesView : ContentPage
 {
 	public RecipesView()
@@ -23,11 +26,12 @@ public partial class RecipesView : ContentPage
     /// Change the page in recipeView
     /// </summary>
     /// <param name="r"> Recipe to display on the view </param>
-    private void NavigateToRecipeView(object? sender, EventArgs e, Recipe r)
+    private async void NavigateToRecipeView(object? sender, EventArgs e, Recipe r)
     {
         RecipeView recipeView = new RecipeView();
         recipeView.BindingContext = r;
-        Navigation.PushAsync(recipeView);
+        await Navigation.PushModalAsync(recipeView);
+
     }
 
 
