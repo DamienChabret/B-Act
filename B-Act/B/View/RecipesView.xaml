@@ -3,9 +3,5 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="B.View.RecipesView"
              Title="Accueil">
-    <VerticalStackLayout>
-        <StackLayout x:Name="testGrid">
-
-        </StackLayout>
-    </VerticalStackLayout>
+    <StackLayout x:Name="testGrid"/>
 </ContentPage>

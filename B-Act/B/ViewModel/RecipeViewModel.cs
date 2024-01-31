@@ -16,6 +16,15 @@ namespace B.ViewModel
         private string recipeDescription;
         private int recipeRating;
 
+        public RecipeViewModel(Recipe recipe)
+        {
+            this.recipe = recipe;
+            recipeId = recipe.ID;
+            recipeName = recipe.Name;
+            recipeDescription = recipe.Description;
+            recipeRating = recipe.Rating;
+        }
+
         /// <summary>
         /// ID of the recipe
         /// </summary>
@@ -31,7 +40,11 @@ namespace B.ViewModel
         public string Name
         {
             get => recipeName;
-            set => recipeName = value;
+            set
+            {
+                recipeName = value;
+                NotifyPropertyChanged(Name);
+            }
         }
 
         /// <summary>
@@ -53,5 +66,10 @@ namespace B.ViewModel
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
+
+        public void NotifyPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

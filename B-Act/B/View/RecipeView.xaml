@@ -5,8 +5,7 @@
              Title="RecipeView"
              xmlns:vm="clr-namespace:B.ViewModel" 
              x:DataType="vm:RecipeViewModel">
-    <VerticalStackLayout>
-
+    <StackLayout>
         <Label Text="{Binding ID}" TextColor="Black"></Label>
         <Entry Text=""></Entry>
 
@@ -18,5 +17,5 @@
 
         <Label Text="{Binding Rating}" TextColor="Black"></Label>
         <Entry Text=""></Entry>
-    </VerticalStackLayout>
+    </StackLayout>
 </ContentPage>

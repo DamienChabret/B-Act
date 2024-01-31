@@ -1,3 +1,4 @@
+using B.ViewModel;
 using Model;
 
 namespace B.View;
@@ -17,7 +18,7 @@ public partial class RecipesView : ContentPage
 		{
             Button btn = new Button();
 			btn.Text = r.Name;
-            btn.Clicked += (s, e) => { NavigateToRecipeView(s, e, r); };
+            btn.Clicked += (s, e) => { NavigateToRecipeView(s, e, new RecipeViewModel(r)); };
             g.Children.Add(btn);
         }
 	}
@@ -26,12 +27,11 @@ public partial class RecipesView : ContentPage
     /// Change the page in recipeView
     /// </summary>
     /// <param name="r"> Recipe to display on the view </param>
-    private async void NavigateToRecipeView(object? sender, EventArgs e, Recipe r)
+    private async void NavigateToRecipeView(object? sender, EventArgs e, RecipeViewModel r)
     {
         RecipeView recipeView = new RecipeView();
         recipeView.BindingContext = r;
         await Navigation.PushModalAsync(recipeView);
-
     }
 
 
