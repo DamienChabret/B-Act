@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="B.View.HomeNavigationView"
+            xmlns:local="clr-namespace:B.View">
+    <!-- Accueil : Pages des recettes -->
+    <local:RecipesView> </local:RecipesView>
+
+    <!-- Page des catégories (à venir) -->
+    
+    <!-- Page des ingrédients (à venir) -->
+    
+    <!-- Page profil (à venir) -->
+    
+</TabbedPage>
