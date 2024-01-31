@@ -9,8 +9,8 @@
         <Label Text="{Binding ID}" TextColor="Black"></Label>
         <Entry Text=""></Entry>
 
-        <Label Text="{Binding Name}" TextColor="Black"></Label>
-        <Entry Text="{Binding Name}"></Entry>
+        <Label Text="{Binding RecipeName}" TextColor="Black"></Label>
+        <Entry Text="{Binding RecipeName}"></Entry>
 
         <Label Text="{Binding Description}" TextColor="Black"></Label>
         <Entry Text=""></Entry>

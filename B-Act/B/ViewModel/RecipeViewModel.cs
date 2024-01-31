@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,12 +9,20 @@ using System.Threading.Tasks;
 
 namespace B.ViewModel
 {
-    public class RecipeViewModel : INotifyPropertyChanged
+    /// <summary>
+    /// ViewModel of the Recipe Model
+    /// </summary>
+    public partial class RecipeViewModel : ObservableObject
     {
         private Recipe recipe;
+
+        [ObservableProperty]
         private int recipeId;
+        [ObservableProperty]
         private string recipeName;
+        [ObservableProperty]
         private string recipeDescription;
+        [ObservableProperty]
         private int recipeRating;
 
         public RecipeViewModel(Recipe recipe)
@@ -24,52 +33,4 @@ namespace B.ViewModel
             recipeDescription = recipe.Description;
             recipeRating = recipe.Rating;
         }
-
-        /// <summary>
-        /// ID of the recipe
-        /// </summary>
-        public int ID
-        {
-            get => recipeId; 
-            set => recipeId = value;
-        }
-
-        /// <summary>
-        /// Name of the recipe
-        /// </summary>
-        public string Name
-        {
-            get => recipeName;
-            set
-            {
-                recipeName = value;
-                NotifyPropertyChanged(Name);
-            }
-        }
-
-        /// <summary>
-        /// Decription of the recipe
-        /// </summary>
-        public string Description
-        {
-            get => recipeDescription;
-            set => recipeDescription = value;
-        }
-
-        /// <summary>
-        /// Rating of the recipe
-        /// </summary>
-        public int Rating
-        {
-            get => recipeRating; 
-            set => recipeRating = value;
-        }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        public void NotifyPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
 }
